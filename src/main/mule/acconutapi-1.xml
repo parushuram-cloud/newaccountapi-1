@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mule xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd ">
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd ">
     <http:listener-config name="acconutapi-1-httpListenerConfig">
         <http:listener-connection host="0.0.0.0" port="8081" />
     </http:listener-config>
@@ -124,6 +124,9 @@ output application/json
         </error-handler>
     </flow>
     <flow name="post:\createAccount:application\json:acconutapi-1-config">
-		<flow-ref doc:name="createAccountFlow" doc:id="63c5b720-e9a3-4e6e-8d37-b4fdaa6c42b8" name="createAccountFlow"/>
+        <flow-ref doc:name="createAccountFlow" doc:id="63c5b720-e9a3-4e6e-8d37-b4fdaa6c42b8" name="createAccountFlow" />
+    </flow>
+    <flow name="get:\getAccountIdDetails:acconutapi-1-config">
+		<flow-ref doc:name="getAccountIdDetailsFlow" doc:id="778ceeab-eb39-4c1d-b781-689cce389c49" name="getAccountIdDetailsFlow"/>
     </flow>
 </mule>

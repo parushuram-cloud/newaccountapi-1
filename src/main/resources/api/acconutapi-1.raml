@@ -17,7 +17,23 @@ types:
           application/json:
             type: accountResponse
             example:  !include examples/accountResponseExample.raml
-              
+ 
+/getAccountIdDetails:
+ get:
+   queryParameters:
+     accountId:
+      example: '1001'
+   responses:
+     200:
+       body:
+         application/json:
+           type: accountResponse
+           example: !include examples/accountResponseExample.raml
+             
+      
+        
+     
+ 
 
 
             
